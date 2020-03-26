@@ -3,29 +3,33 @@ package com.edison.bookcase.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
 @Document
-public class Book {
+public class Book implements Serializable {
 
     @Id
-    private Integer id;
+    private UUID id = UUID.randomUUID();
     private String name;
     private Date addingDate = new Date();
     private String category;
 
-    public Book(Integer id, String name, Date addingDate, String category) {
+    public Book(UUID id, String name, Date addingDate, String category) {
         this.id = id;
         this.name = name;
         if(addingDate != null) this.addingDate = addingDate;
         this.category = category;
     }
 
-    public Integer getId() {
+    public Book() { }
+
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
