@@ -29,6 +29,6 @@ d) Replace "all" in the link above with the id, and use GET method agin
 e) Check the redis-cli monitor, the book with specified id was cached
 
 ## Screenshots
-![get book](https://github.com/edisoncat/bookcase/screenshots/get.jpg)
+![get book](https://github.com/edisoncat/bookcase/screenshots/get.png)
 
-![caching](https://github.com/edisoncat/bookcase/screenshots/caching.jpg)
+![caching](https://github.com/edisoncat/bookcase/screenshots/caching.png)
